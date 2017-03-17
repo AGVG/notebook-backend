@@ -1,0 +1,53 @@
+const mongoose = require('mongoose');
+const Schema   = mongoose.Schema;
+const Artist   = require('../models/artist')
+
+const genreSchema = new mongoose.Schema({
+  AltRock       : [{ type: Schema.Types.ObjectId, ref: "Artist"}],
+  Ambient       : [{ type: Schema.Types.ObjectId, ref: "Artist"}],
+  Baroque       : [{ type: Schema.Types.ObjectId, ref: "Artist"}],
+  BlackMetal    : [{ type: Schema.Types.ObjectId, ref: "Artist"}],
+  Blues         : [{ type: Schema.Types.ObjectId, ref: "Artist"}],
+  Classical     : [{ type: Schema.Types.ObjectId, ref: "Artist"}],
+  Country       : [{ type: Schema.Types.ObjectId, ref: "Artist"}],
+  Disco         : [{ type: Schema.Types.ObjectId, ref: "Artist"}],
+  Dub           : [{ type: Schema.Types.ObjectId, ref: "Artist"}],
+  Dubstep       : [{ type: Schema.Types.ObjectId, ref: "Artist"}],
+  DrumAndBass   : [{ type: Schema.Types.ObjectId, ref: "Artist"}],
+  EDM           : [{ type: Schema.Types.ObjectId, ref: "Artist"}],
+  Electronica   : [{ type: Schema.Types.ObjectId, ref: "Artist"}],
+  Folk          : [{ type: Schema.Types.ObjectId, ref: "Artist"}],
+  Funk          : [{ type: Schema.Types.ObjectId, ref: "Artist"}],
+  Gospel        : [{ type: Schema.Types.ObjectId, ref: "Artist"}],
+  Grime         : [{ type: Schema.Types.ObjectId, ref: "Artist"}],
+  Grunge        : [{ type: Schema.Types.ObjectId, ref: "Artist"}],
+  Harcore       : [{ type: Schema.Types.ObjectId, ref: "Artist"}],
+  HeavyMetal    : [{ type: Schema.Types.ObjectId, ref: "Artist"}],
+  Hiphop        : [{ type: Schema.Types.ObjectId, ref: "Artist"}],
+  House         : [{ type: Schema.Types.ObjectId, ref: "Artist"}],
+  Indie         : [{ type: Schema.Types.ObjectId, ref: "Artist"}],
+  Instrumental  : [{ type: Schema.Types.ObjectId, ref: "Artist"}],
+  Jazz          : [{ type: Schema.Types.ObjectId, ref: "Artist"}],
+  Melody        : [{ type: Schema.Types.ObjectId, ref: "Artist"}],
+  Metalcore     : [{ type: Schema.Types.ObjectId, ref: "Artist"}],
+  NewWave       : [{ type: Schema.Types.ObjectId, ref: "Artist"}],
+  Opera         : [{ type: Schema.Types.ObjectId, ref: "Artist"}],
+  Orchestra     : [{ type: Schema.Types.ObjectId, ref: "Artist"}],
+  Pop           : [{ type: Schema.Types.ObjectId, ref: "Artist"}],
+  Progressive   : [{ type: Schema.Types.ObjectId, ref: "Artist"}],
+  PunkRock      : [{ type: Schema.Types.ObjectId, ref: "Artist"}],
+  Rap           : [{ type: Schema.Types.ObjectId, ref: "Artist"}],
+  Reggae        : [{ type: Schema.Types.ObjectId, ref: "Artist"}],
+  Reggaeton     : [{ type: Schema.Types.ObjectId, ref: "Artist"}],
+  Rock          : [{ type: Schema.Types.ObjectId, ref: "Artist"}],
+  Rockatbilly   : [{ type: Schema.Types.ObjectId, ref: "Artist"}],
+  Shoegazing    : [{ type: Schema.Types.ObjectId, ref: "Artist"}],
+  Ska           : [{ type: Schema.Types.ObjectId, ref: "Artist"}],
+  Soul          : [{ type: Schema.Types.ObjectId, ref: "Artist"}],
+  Techno        : [{ type: Schema.Types.ObjectId, ref: "Artist"}],
+  Trance        : [{ type: Schema.Types.ObjectId, ref: "Artist"}],
+  Trap          : [{ type: Schema.Types.ObjectId, ref: "Artist"}],
+  World         : [{ type: Schema.Types.ObjectId, ref: "Artist"}]
+});
+
+module.exports = mongoose.model('genre', genreSchema);
